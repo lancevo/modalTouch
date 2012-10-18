@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="nojs">
+<head>
+    <meta charset="utf-8">
+    <title>Performance - Allianz Life</title>
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+    // Hide the address bar for webkit mobile browser
+    window.addEventListener("load",function() {
+	  setTimeout(function(){	    
+	    window.scrollTo(0, 1);
+	  }, 0);
+	});
+	</script>
+
+	<link href="modaltouch.css" rel="stylesheet" />
+</head>
+<body>
+<a id="loading" href="#">SHOW LOADING MODAL</a> <br/>
+<a id="error" href="#">SHOW ERROR MODAL</a> <br/>
+
+<div id="loadingModal" class="modalTouch">
+	<div class="modalContent">
+		<img src="spinner.gif" />
+		<a href="http://www.yahoo.com">YAHOO</a>
+	</div>
+	<div class="modalClose"> <div class="icon">X</div></div>
+</div>
+
+<div id="errorModal" class="modalTouch">
+	<div class="modalContent">
+		<p>
+		this is an error! <br/>
+		Or a different modal.
+	</p>
+	</div>
+	<div class="modalClose"> <div class="icon">X</div></div>
+</div>
+
+
+<script src="jquery.js"></script>
+<script src="modaltouch.js"></script>
+
+<script>	
+	$("#error").click(function(e){
+		$("#errorModal").modalTouch();
+	});
+	$("#loading").click(function(e){
+		$('#loadingModal').modalTouch();
+	});	
+	
+</script>
+            
+</body>
+</html>
